@@ -1,0 +1,54 @@
+/*This is for custom Classes, inhereted*/
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+.img-logo-size{
+  height: 100px;
+  width: 290px;
+}
+
+.aside-bar-h{
+  height: 100px;
+}
+
+.d-flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); /* soft, deep enough */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.custom-color{
+  color: rgb(108, 108, 107);
+}
+
+.cstm-lttr-spcng{
+  letter-spacing: 1px;
+}
+
+.cstm-icon-clr{
+  color: rgb(73, 147, 107);
+}
+
+/*hamburger menu image footer*/
+.custom-hm-img{
+  height: 70px;
+  width: 70px;
+}
+
+/*footer username container*/
+.usrnme-footer-container{
+  width: 220px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

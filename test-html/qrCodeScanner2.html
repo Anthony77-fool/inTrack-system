@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Scanner (jQuery)</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- html5-qrcode Library -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+  <div id="you-qr-result" style="margin-bottom: 20px; font-weight: bold;"></div>
+
+  <h1>Scan QR Code</h1>
+  <div style="display: flex; justify-content: center;">
+    <div id="my-qr-reader" style="width: 500px;"></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      const $resultBox = $('#you-qr-result');
+      let lastResult = '';
+      let scanCount = 0;
+
+      function onScanSuccess(decodedText, decodedResult) {
+        if (decodedText !== lastResult) {
+          lastResult = decodedText;
+          scanCount++;
+
+          alert("Your QR is: " + decodedText);
+          $resultBox.html(`You scanned ${scanCount}: ${decodedText}`);
+        }
+      }
+
+      const qrScanner = new Html5QrcodeScanner("my-qr-reader", {
+        fps: 10,
+        qrbox: 250
+      });
+
+      qrScanner.render(onScanSuccess);
+    });
+  </script>
+
+</body>
+</html>

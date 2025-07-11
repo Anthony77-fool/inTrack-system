@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <video id="webcamVideo" autoplay></video>
+
+  <script>
+    const webcamVideo = document.getElementById("webcamVideo");
+    const constraints = {
+      video: {
+        windth: 1280,
+        heigth: 720,
+        facingMode: "environment",
+      }
+    }
+
+    //stream the actual video
+    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+      webcamVideo.srcObject = stream;
+    }).catch((error) => {
+      console.error();
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Class Management</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/inac-logo.png">
+
+  <!--Bootstrap link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!--CDN for QRCode generator-->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+
+  <!--CDN for Webcam HTML5 -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- CUSTOM GOOGLE FONTS: Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Over+the+Rainbow&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/da97a1e785.js" crossorigin="anonymous"></script>
+
+  <!-- CUSTOM CSS CLasses -->
+  <link rel="stylesheet" href="css/customClasses.css">
+  <link rel="stylesheet" href="css/classManagementStle.css">
+
+</head>
+<body>
+  
+  <!-- Hamburger Menu -->
+  <aside class="position-fixed h-100 w-25">
+
+    <!-- Aside Bar Header -->
+    <header class="custom-shadow">
+      <img class="img-logo-size" src="images/inTrack-logo.jpg" alt="This is inTrack-logo">
+    </header>
+
+    <!-- Aside Bar Body -->
+    <div class="body mt-4">
+      <ul class="list-unstyled d-flex flex-column gap-4">
+        <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer">
+          <i class="fa-solid fa-school fs-3 ms-5 me-4 cstm-icon-clr"></i>
+          <a class="text-decoration-none fs-5 custom-color fw-bold cstm-lttr-spcng" href="#">Class Management</a>
+        </li>
+        <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer">
+          <i class="fa-solid fa-camera fs-3 ms-5 me-4 cstm-icon-clr"></i>
+          <a class="text-decoration-none fs-5 custom-color fw-bold cstm-lttr-spcng" href="#">QR Scanner Management</a>
+        </li>
+        <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer">
+          <i class="fa-solid fa-chart-column fs-3 ms-5 me-4 cstm-icon-clr"></i>
+          <a class="text-decoration-none fs-4 custom-color fw-bold cstm-lttr-spcng" href="#">Reports</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Aside Bar Footer -->
+    <footer class="custom-shadow aside-bar-h d-flex-center justify-content-evenly flex-row">
+      <img class="rounded-circle border border-success-subtle border-2 custom-hm-img" id="user-hm-img" src="images/profileImg/Sabado-Marck-Anthony.png" alt="This is profile image">
+      <div class="usrnme-footer-container d-flex-center">
+        <h3 class="fs-5">Marck Anthony Sabado</h3>
+      </div>
+      <i class="fa-solid fa-angle-up fs-2 cursor-pointer"></i>
+    </footer>
+
+  </aside>
+
+  <!-- this is main -->
+  <main class="border border-4 p-5">
+
+    <!-- Section for creating a class -->
+    <section class="custom-shadow p-3">
+      <h3>Create Class</h3>
+
+      <!-- container for input fields -->
+      <div class="container">
+        <div class="row gy-2">
+
+          <div class="col-4">
+            <h4 class="custom-color fs-6">Section Name*</h4>
+            <input class="w-100 ps-2" type="text" placeholder="e.g. 12-Descartes">
+          </div>
+
+          <div class="col-4">
+            <h4 class="custom-color fs-6">Grade Level*</h4>
+            <input class="w-100 ps-2" type="number" placeholder="e.g. 11" min="7" max="12">
+          </div>
+
+          <div class="col-4">
+            <h4 class="custom-color fs-6">School Year*</h4>
+            <!-- for the sy. dropdown option -->
+            <div>
+              <select id="schoolYearSelect" class="form-select cursor-pointer">
+                <option selected disabled>Select School Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <h4 class="custom-color fs-6">Strand* (only if SHS)</h4>
+            <input class="w-100 ps-2" type="text" placeholder="e.g. STEM">
+          </div>
+
+          <div class="btn-container col-4 d-flex-center">
+            <button class="btn btn-success h-75 w-100 mt-3">Create a Class</button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <h2>main</h2>
+  </main>
+
+  <script>
+    const select = document.getElementById('schoolYearSelect');
+    const currentYear = new Date().getFullYear();
+
+    for (let i = 0; i < 10; i++) {
+      const start = currentYear + i;
+      const end = start + 1;
+      const option = document.createElement('option');
+      option.value = `${start}-${end}`;
+      option.textContent = `${start}-${end}`;
+      select.appendChild(option);
+    }
+  </script>
+
+</body>
+</html>
