@@ -52,3 +52,24 @@ body{
 .cursor-pointer{
   cursor: pointer;
 }
+
+.custom-header-fs{
+  font-size: 30px;
+}
+
+.cstm-box-bg-clr{
+  background-color: rgb(84, 195, 135);
+}
+
+/*for calendar bg*/
+.class-bg-color{
+  background-color: rgb(163, 217, 255);
+}
+
+.students-sec-fs{
+  font-size: 2.7rem;
+}
+
+.students-sec-bg-color{
+  background-color: rgb(255, 246, 137);
+}

@@ -1,5 +1,16 @@
 /*This css is intended for specific classManagement*/
 main{
-  margin-left: 400px;
-  margin-right: 300px;
+  margin-left: 25%;
+  margin-right: 20%;
+}
+
+#mini-sidebar{
+  width: 20%;               /* or any fixed width like 200px */
+  top: 0;
+  right: 0;                 /* this puts it at the right edge of the screen */
+  z-index: 1000;
+}
+
+.cstm-btn-w{
+  width: 40%;
 }
