@@ -14,3 +14,17 @@ main{
 .cstm-btn-w{
   width: 40%;
 }
+
+/*class-details, add student form*/
+.photo-container{
+  height: 250px;
+}
+
+/* icon for editing the photo */
+#editing_Photo {
+  position: absolute;
+  top: 31vh;     /* adjust as needed */
+  right: 51%;   /* adjust as needed */
+  color: #555;   /* optional */
+  cursor: pointer;
+}

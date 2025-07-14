@@ -44,8 +44,8 @@
 </head>
 <body>
   
-  <!-- Hamburger Menu -->
-  <aside class="position-fixed h-100 w-25">
+  <!-- Navigation: Hamburger Menu -->
+  <nav class="position-fixed h-100 w-25">
 
     <!-- Aside Bar Header -->
     <header class="custom-shadow">
@@ -54,7 +54,7 @@
 
     <!-- Aside Bar Body -->
     <div class="body mt-4">
-      <ul class="list-unstyled d-flex flex-column gap-4">
+      <ul class="list-unstyled d-flex flex-column gap-4"><!-- Current Focus -->
         <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer cstm-box-bg-clr">
           <i class="fa-solid fa-school fs-3 ms-5 me-4 text-white"></i>
           <a class="text-decoration-none fs-5 text-white fw-bold cstm-lttr-spcng" href="#">Class Management</a>
@@ -79,7 +79,7 @@
       <i class="fa-solid fa-angle-up fs-2 cursor-pointer"></i>
     </footer>
 
-  </aside>
+  </nav>
 
   <!-- this is main -->
   <main class="d-flex flex-column gap-4  p-5">
@@ -129,8 +129,45 @@
     <!-- Created Class Sections -->
     <section class=" container">
       <div class="row gy-4">
+        <!-- left side ps(even) right side(odd) pe -->
+        <article class="col-6 ps-0">
+          <div class="inner-container custom-shadow cstm-box-bg-clr p-4">
 
-        <article class="col-6">
+            <!-- Class Header -->
+            <header class="d-flex flex-row text-white border-bottom border-2 pb-2">
+              <h3 class="fw-bold me-2">Class</h3>
+              <h3 class="fw-bold">12 – Descartes</h3> <!-- Combine grade & section -->
+            </header>
+
+            <!-- Class Info -->
+            <div class="d-flex justify-content-between text-white pt-2">
+              <div class="info-labels fw-medium fs-5"><!-- Label -->
+                <p class="mb-1">Grade Level:</p>
+                <p class="mb-1">School Year:</p>
+                <p class="mb-1">Strand:</p>
+              </div>
+
+              <div class="info-data text-end fw-medium fs-5"><!-- Data -->
+                <p class="mb-1">12</p>
+                <p class="mb-1">2024–2025</p>
+                <p class="mb-1">STEM</p>
+              </div>
+            </div>
+
+            <!-- Class Actions -->
+            <footer class="mt-3 d-flex flex-row">
+              <!-- Goes to another Page -->
+              <a href="class-details.html" id="viewButton" class="btn bg-white fs-5 d-flex justify-content-evenly text-success fw-bold cursor-pointer cstm-btn-w">
+                View <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+              <!-- Delete Selected Class -->
+              <button class="btn btn-danger cstm-btn-w fw-semibold cursor-pointer cstm-btn-w fs-5 ms-3">Delete <i class="bi bi-trash-fill"></i></button>
+            </footer>
+
+          </div>
+        </article>
+
+        <article class="col-6 pe-0">
           <div class="inner-container custom-shadow cstm-box-bg-clr p-4">
 
             <!-- Class Header -->
@@ -163,7 +200,7 @@
           </div>
         </article>
 
-        <article class="col-6">
+        <article class="col-6 ps-0">
           <div class="inner-container custom-shadow cstm-box-bg-clr p-4">
 
             <!-- Class Header -->
@@ -196,7 +233,7 @@
           </div>
         </article>
 
-        <article class="col-6">
+        <article class="col-6 pe-0">
           <div class="inner-container custom-shadow cstm-box-bg-clr p-4">
 
             <!-- Class Header -->
@@ -229,40 +266,7 @@
           </div>
         </article>
 
-        <article class="col-6">
-          <div class="inner-container custom-shadow cstm-box-bg-clr p-4">
-
-            <!-- Class Header -->
-            <header class="d-flex flex-row text-white border-bottom border-2 pb-2">
-              <h3 class="fw-bold me-2">Class</h3>
-              <h3 class="fw-bold">12 – Descartes</h3> <!-- Combine grade & section -->
-            </header>
-
-            <!-- Class Info -->
-            <div class="d-flex justify-content-between text-white pt-2">
-              <div class="info-labels fw-medium fs-5"><!-- Label -->
-                <p class="mb-1">Grade Level:</p>
-                <p class="mb-1">School Year:</p>
-                <p class="mb-1">Strand:</p>
-              </div>
-
-              <div class="info-data text-end fw-medium fs-5"><!-- Data -->
-                <p class="mb-1">12</p>
-                <p class="mb-1">2024–2025</p>
-                <p class="mb-1">STEM</p>
-              </div>
-            </div>
-
-            <!-- Class Actions -->
-            <footer class="mt-3 d-flex flex-row">
-              <button class="btn bg-white fs-5 d-flex justify-content-evenly text-success fw-bold cursor-pointer cstm-btn-w" id="viewButton">View <i class="bi bi-box-arrow-up-right"></i> </button>
-              <button class="btn btn-danger cstm-btn-w fw-semibold cursor-pointer cstm-btn-w fs-5 ms-3">Delete <i class="bi bi-trash-fill"></i></button>
-            </footer>
-
-          </div>
-        </article>
-
-        <article class="col-6">
+        <article class="col-6 ps-0">
           <div class="inner-container custom-shadow cstm-box-bg-clr p-4">
 
             <!-- Class Header -->
@@ -300,7 +304,7 @@
 
   </main>
 
-  <!-- MINI Side Bar -->
+  <!-- ASide Bar -->
   <aside class="position-fixed h-100 d-flex flex-column gap-4" id="mini-sidebar">
     
     <!-- CALENDAR -->
