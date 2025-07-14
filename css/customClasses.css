@@ -21,7 +21,6 @@ body{
 .custom-shadow {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); /* soft, deep enough */
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  border-radius: 0.5rem;
   background-color: #fff;
   padding: 0.75rem 1rem;
 }
@@ -72,4 +71,20 @@ body{
 
 .students-sec-bg-color{
   background-color: rgb(255, 246, 137);
+}
+
+.custom-table-bg{
+  background-color: rgb(108, 108, 107);
+}
+
+.inner-shadow {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); /* subtle inner depth */
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.cstm-view-icon{
+  color: rgb(25, 122, 192);
 }
