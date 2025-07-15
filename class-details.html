@@ -239,9 +239,11 @@
           <div class="modal-body container">
             <div class="row">
 
-               <!-- Photo container (Left) -->
+              <!-- Photo container (Left) -->
               <div class="col-6">
-                <div class="h-100 border rounded d-flex align-items-center justify-content-center photo-container">
+                <div class="border rounded d-flex align-items-center justify-content-center photo-container">
+                  <!-- IMG DATA -->
+                  <img src="images/profileImg/Sabado-Marck-Anthony.png" alt="uploaded profile image" class="w-100 h-100 object-fit-contain rounded">
                   <i class="fa-solid fa-pen-to-square fs-1" id="editing_Photo"><!-- ICON for editing photo --></i>
                 </div>
               </div>
@@ -255,15 +257,15 @@
 
                 <!-- GENDER -->
                 <div class="d-flex gap-3">
-
+                  <!-- MALE -->
                   <div class="form-control d-flex align-items-center gap-2 border rounded-1">
-                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
-                    <label class="form-check-label mb-0" for="genderMale">Male</label>
+                    <input class="form-check-input cursor-pointer" type="radio" name="gender" id="genderMale" value="Male">
+                    <label class="form-check-label mb-0 cursor-pointer" for="genderMale">Male</label>
                   </div>
-
+                  <!-- FEMALE -->
                   <div class="form-control d-flex align-items-center gap-2 border rounded-1">
-                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
-                    <label class="form-check-label mb-0" for="genderFemale">Female</label>
+                    <input class="form-check-input cursor-pointer" type="radio" name="gender" id="genderFemale" value="Female">
+                    <label class="form-check-label mb-0 cursor-pointer" for="genderFemale">Female</label>
                   </div>
 
                 </div>
@@ -271,32 +273,54 @@
               </div>
 
 
-              <!-- Address -->
-               <div class="d-flex gap-3 mt-3">
-                <input class="form-control" type="text" placeholder="Ilocos Norte">
-                <input class="form-control" type="text" placeholder="municipality">
-                <input class="form-control" type="text" placeholder="barangay">
-               </div>
+              <!-- Address Selects -->
+              <div class="d-flex gap-3 mt-3">
+                <!-- Province Dropdown -->
+                <select id="province" class="form-select cursor-pointer">
+                  <option selected disabled class="cursor-pointer">Select Province</option>
+                </select>
 
-               <!-- Birth Date -->
-               <div class="d-flex gap-3 mt-3">
-                <input class="form-control" type="text" placeholder="month">
-                <input class="form-control" type="text" placeholder="day">
-                <input class="form-control" type="text" placeholder="year">
-               </div>
+                <!-- Municipality Dropdown -->
+                <select id="municipality" class="form-select cursor-pointer">
+                  <option selected disabled class="cursor-pointer">Select Municipality</option>
+                </select>
 
-               <!-- Parent Credentials -->
-               <div class="d-flex gap-3 mt-3">
+                <!-- Barangay Dropdown -->
+                <select id="barangay" class="form-select cursor-pointer">
+                  <option selected disabled class="cursor-pointer">Select Barangay</option>
+                </select>
+              
+              </div>
+
+              <!-- Birth Date -->
+              <div class="d-flex gap-3 mt-3">
+
+                <select id="birthMonth" class="form-select cursor-pointer">
+                  <option selected disabled class="cursor-pointer">Select Month</option>
+                </select>
+
+                <select id="birthDay" class="form-select cursor-pointer">
+                  <option selected disabled class="cursor-pointer">Select Day</option>
+                </select>
+
+                <select id="birthYear" class="form-select cursor-pointer">
+                  <option selected disabled class="cursor-pointer">Select Year</option>
+                </select>
+
+              </div>
+
+              <!-- Parent Credentials -->
+              <div class="d-flex gap-3 mt-3">
                 <input class="form-control" type="text" placeholder="Parent Full Name">
                 <input class="form-control" type="text" placeholder="Email Address">
-               </div>
+              </div>
 
             </div>
           </div>
 
           <!-- Buttons for finalizing -->
           <footer class="modal-footer d-flex-center py-4 d-flex gap-5">
-            <button type="submit" class="btn btn-primary w-25 py-2 cstm-lttr-spcng fs-5">Submit</button>
+            <button type="submit" class="btn btn-success w-25 py-2 cstm-lttr-spcng fs-5">Submit</button>
             <button type="button" class="btn btn-danger w-25 py-2 cstm-lttr-spcng fs-5" data-bs-dismiss="modal">Cancel</button>
           </footer>
         </form>
@@ -305,19 +329,170 @@
     </div>
   </div>
 
+  <!-- POP UP for Viewing Student -->
+  <!-- Modal -->
+  <div class="modal fade" id="viewStudent_Form" tabindex="-1" aria-labelledby="formTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
 
-  <script src="js/sySelect.js"></script><!-- for the class management s.y. selection -->
-  <script src="js/calendar.js"></script>
+        <form>
+          <!-- Head -->
+          <header class="modal-header d-flex-center custom-shadow">
+            <img src="images/inTrack-logo.jpg" alt="" id="viewModal_Header" class="w-25">
+          </header>
 
+          <!-- Inputs -->
+          <div class="modal-body container">
+            <div class="row">
+
+              <!-- Photo container (Left) -->
+              <div class="col-6">
+                <div class="h-100 border rounded d-flex align-items-center justify-content-center photo-container">
+                  <!-- IMG DATA -->
+                  <img src="images/profileImg/Sabado-Marck-Anthony.png" alt="uploaded profile image" class="w-100 h-100 object-fit-contain rounded">
+                </div>
+              </div>
+
+              <!-- LRN & Names, GENDER -->
+              <div class="col-6 d-flex flex-column gap-3">
+                
+                <div>
+                  <!-- Label -->
+                  <label class="form-label fw-semibold fs-6 custom-color">First Name*</label>
+                  <input class="form-control" type="text" placeholder="Marck Anthony" disabled>
+                </div>
+
+                <div>
+                  <!-- Label -->
+                  <label class="form-label fw-semibold fs-6 custom-color">Middle Name*</label>
+                  <input class="form-control" type="text" placeholder="Licuan" disabled>
+                </div>
+                
+                <div>
+                  <!-- Label -->
+                  <label class="form-label fw-semibold fs-6 custom-color">Last Name*</label>
+                  <input class="form-control" type="text" placeholder="Sabado" disabled>
+                </div>
+                
+                <div>
+                  <!-- Label -->
+                  <label class="form-label fw-semibold fs-6 custom-color">LRN*</label>
+                  <input class="form-control" type="text" placeholder="127283642" disabled>
+                </div>
+
+                <!-- GENDER -->
+                <div>
+                  <!-- Label -->
+                  <label class="form-label fw-semibold fs-6 custom-color">Gender*</label>
+
+                  <div class="d-flex gap-3">
+                    <!-- MALE -->
+                    <div class="form-control d-flex align-items-center gap-2 border rounded-1">
+                      <input class="form-check-input cursor-pointer" type="radio" name="gender" id="genderMale" value="Male" checked disabled>
+                      <label class="form-check-label mb-0 cursor-pointer" for="genderMale">Male</label>
+                    </div>
+                    <!-- FEMALE -->
+                    <div class="form-control d-flex align-items-center gap-2 border rounded-1">
+                      <input class="form-check-input cursor-pointer" type="radio" name="gender" id="genderFemale" value="Female" disabled>
+                      <label class="form-check-label mb-0 cursor-pointer" for="genderFemale">Female</label>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- Address Selects -->
+              <div class="mt-3">
+                <!-- Label -->
+                <label class="form-label fw-semibold fs-6 custom-color">Address*</label>
+
+                <div class="d-flex gap-3">
+                  <!-- Province Dropdown -->
+                  <select class="form-select cursor-pointer" disabled>
+                    <option selected disabled class="cursor-pointer">Ilocos Norte</option>
+                  </select>
+
+                  <!-- Municipality Dropdown -->
+                  <select class="form-select cursor-pointer" disabled>
+                    <option selected disabled class="cursor-pointer">Pasuquin</option>
+                  </select>
+
+                  <!-- Barangay Dropdown -->
+                  <select class="form-select cursor-pointer" disabled>
+                    <option selected disabled class="cursor-pointer">Susugaen</option>
+                  </select>
+                </div>
+              
+              </div>
+
+              <!-- Birth Date -->
+              <div class="mt-3">
+                <!-- Label -->
+                <label class="form-label fw-semibold fs-6 custom-color">Birth Date*</label>
+
+                <div class="d-flex gap-3">
+                  <select class="form-select cursor-pointer" disabled>
+                    <option selected disabled class="cursor-pointer">Month</option>
+                  </select>
+
+                  <select class="form-select cursor-pointer" disabled>
+                    <option selected disabled class="cursor-pointer">11</option>
+                  </select>
+
+                  <select class="form-select cursor-pointer" disabled>
+                    <option selected disabled class="cursor-pointer">2005</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Parent Credentials -->
+              <div class="mt-3">
+                <!-- Label -->
+                <label class="form-label fw-semibold fs-6 custom-color">Parent Credentials*</label>
+
+                <div class="d-flex gap-3">
+                  <input class="form-control" type="text" placeholder="Parent De Example" disabled>
+                  <input class="form-control" type="text" placeholder="example@gmail.com" disabled>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Buttons for finalizing -->
+          <footer class="modal-footer d-flex-center flex-column py-5">
+            <!-- Label -->
+            <label class="form-label fw-semibold fs-6 custom-color">Generated QR*</label>
+            
+            <!-- Photo container (Left) -->
+            <div class=" border rounded d-flex align-items-center justify-content-center photo-container">
+              <!-- IMG DATA -->
+              <img src="images/qr-code-sample.png" alt="uploaded profile image" class="w-100 custom-h-qr object-fit-contain rounded">
+              <i class="bi bi-download fs-1" id="download_QR_Icon"><!-- ICON for Downloading QR --></i>
+            </div>
+          </footer>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/calendar.js"></script><!-- for the calendar "ASIDE" -->
+  <script src="js/address_Selection.js"></script>
+  <script src="js/birthdate_Selection.js"></script>
 
   <!-- Automatically Show Modal on Page Load -->
   <script>
-    /*
+    
     window.addEventListener('DOMContentLoaded', function () {
-      const editModal = new bootstrap.Modal(document.getElementById('addStudent_Form'));
+      const editModal = new bootstrap.Modal(document.getElementById('viewStudent_Form'));
       editModal.show();
     });
-    */
+    
   </script>
 
 </body>

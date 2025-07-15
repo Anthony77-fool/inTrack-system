@@ -88,3 +88,7 @@ body{
 .cstm-view-icon{
   color: rgb(25, 122, 192);
 }
+
+.custom-h-qr{
+  height: 200px;
+}
