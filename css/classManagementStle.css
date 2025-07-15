@@ -28,3 +28,17 @@ main{
   color: #555;   /* optional */
   cursor: pointer;
 }
+
+/*view modal inTrack logo header*/
+#viewModal_Header{
+  height: 70px;
+}
+
+/*for icon download_QR_Icon*/
+#download_QR_Icon{
+  position: absolute;
+  top: 91.4%;     /* adjust as needed */
+  right: 36%;   /* adjust as needed */
+  color: #555;   /* optional */
+  cursor: pointer;
+}
