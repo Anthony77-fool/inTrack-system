@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // ✅ Load all provinces on page load
   $.getJSON("https://psgc.gitlab.io/api/provinces", function (data) {
     data.forEach(function (province) {
@@ -36,4 +37,5 @@ $(document).ready(function () {
       });
     });
   });
+  
 });
