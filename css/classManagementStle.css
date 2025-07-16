@@ -23,7 +23,7 @@ main{
 /* icon for editing the photo */
 #editing_Photo {
   position: absolute;
-  top: 31vh;     /* adjust as needed */
+  top: 54vh;     /* adjust as needed */
   right: 51%;   /* adjust as needed */
   color: #555;   /* optional */
   cursor: pointer;
@@ -41,4 +41,24 @@ main{
   right: 36%;   /* adjust as needed */
   color: #555;   /* optional */
   cursor: pointer;
+}
+
+/*ICON for exiting modal*/
+#exitView_Modal{
+  position: relative;
+  bottom: 4.8vh;
+  left: 38%;
+  color: #198754; /* Same as text-success */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+#exitView_Modal:hover {
+  color: #dc3545; /* Bootstrap's text-danger color */
+}
+
+/*Anchor to class management*/
+#link_classManagement{
+  position: absolute;
+  top: 4vh;
+  left: 27.2%;
 }
