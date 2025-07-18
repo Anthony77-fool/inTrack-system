@@ -41,6 +41,7 @@
   <link rel="stylesheet" href="css/classManagementStle.css">
   <link rel="stylesheet" href="css/calendar.css">
   <link rel="stylesheet" href="css/modal-z-index.css">
+  <link rel="stylesheet" href="css/tooltipStyle.css">
 
 </head>
 <body>
@@ -672,10 +673,12 @@
   <div class="modal fade" id="confirmAddModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content z-3">
-        <div class="modal-header">
+
+        <div class="modal-header d-flex justify-content-between">
           <h5 class="modal-title">Confirm Add</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <i class="fa-solid fa-circle-xmark fs-2 cursor-pointer text-secondary" data-bs-dismiss="modal" aria-label="Close" role="button" title="Close Modal"></i>
         </div>
+
         <div class="modal-body">Are you sure you want to add this student?</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-success" id="yesAddStudent">Yes, Add</button>
@@ -689,10 +692,12 @@
   <div class="modal fade" id="confirmUpdateModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content z-3">
-        <div class="modal-header">
+
+        <div class="modal-header d-flex justify-content-between">
           <h5 class="modal-title">Confirm Update</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <i class="fa-solid fa-circle-xmark fs-2 cursor-pointer text-secondary" data-bs-dismiss="modal" aria-label="Close" role="button" title="Close Modal"></i>
         </div>
+
         <div class="modal-body">Are you sure you want to update this student's information?</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-success" id="yesUpdateStudent">Yes, Update</button>
@@ -706,10 +711,12 @@
   <div class="modal fade" id="confirmCancelModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content z-3">
-        <div class="modal-header">
+
+        <div class="modal-header d-flex justify-content-between">
           <h5 class="modal-title">Confirm Cancel</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <i class="fa-solid fa-circle-xmark fs-2 cursor-pointer text-secondary" data-bs-dismiss="modal" aria-label="Close" role="button" title="Close Modal"></i>
         </div>
+
         <div class="modal-body">Are you sure you want to cancel?</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" id="yesCancelForm">Yes, Cancel</button>

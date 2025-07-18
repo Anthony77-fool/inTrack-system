@@ -97,3 +97,17 @@ body{
   text-shadow: 0 0 0.6px currentColor, 0 0 0.6px currentColor; /* Fake bold effect */
   display: inline-block; /* Ensures `text-shadow` applies properly */
 }
+
+/*class-details, add student form*/
+.photo-container{
+  height: 250px;
+}
+
+/* icon for editing the photo */
+#editing_Photo {
+  position: absolute;
+  top: 54vh;     /* adjust as needed */
+  right: 51%;   /* adjust as needed */
+  color: #555;   /* optional */
+  cursor: pointer;
+}
