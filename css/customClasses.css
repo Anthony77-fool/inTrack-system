@@ -97,3 +97,10 @@ body{
   text-shadow: 0 0 0.6px currentColor, 0 0 0.6px currentColor; /* Fake bold effect */
   display: inline-block; /* Ensures `text-shadow` applies properly */
 }
+
+/* Override Bootstrap tooltip styling */
+.tooltip-inner {
+  background-color: #198754 !important; /* Bootstrap's bg-success */
+  color: white !important;
+  font-weight: 500;
+}
