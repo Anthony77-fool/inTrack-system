@@ -1,4 +1,11 @@
 /*for tooltip title custom style*/
+/* Override Bootstrap tooltip styling */
+.tooltip-inner {
+  background-color: #198754 !important; /* Bootstrap's bg-success */
+  color: white !important;
+  font-weight: 500;
+}
+
 .tooltip.bs-tooltip-top .tooltip-arrow::before,
 .tooltip.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
   border-top-color: #198754 !important;

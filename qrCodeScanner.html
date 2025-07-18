@@ -58,8 +58,13 @@
 </head>
 <body>
 
+  <!-- For the header logo -->
+  <section class="custom-shadow d-flex-center">
+    <img src="images/InTrack-logo.jpg" class="img-logo-size" alt="">
+  </section>
+
   <!-- Trigger button to start scanning -->
-  <section class="container custom-shadow text-center p-4">
+  <section class="container custom-shadow text-center mt-5 p-4">
 
     <!-- Class Header -->
     <header class="d-flex flex-column custom-color pb-2">
@@ -90,8 +95,8 @@
   </section>
 
   <!-- QR scanner box (hidden initially) -->
-  <div class="container d-flex-center">
-    <div id="my-qr-reader" class="w-50"></div>
+  <div class="container d-flex-center position-absolute">
+    <div id="my-qr-reader" class="w-50 position-absolute"></div>
   </div>
 
   <!-- Modal: Shows scan result -->

@@ -98,9 +98,16 @@ body{
   display: inline-block; /* Ensures `text-shadow` applies properly */
 }
 
-/* Override Bootstrap tooltip styling */
-.tooltip-inner {
-  background-color: #198754 !important; /* Bootstrap's bg-success */
-  color: white !important;
-  font-weight: 500;
+/*class-details, add student form*/
+.photo-container{
+  height: 250px;
+}
+
+/* icon for editing the photo */
+#editing_Photo {
+  position: absolute;
+  top: 54vh;     /* adjust as needed */
+  right: 51%;   /* adjust as needed */
+  color: #555;   /* optional */
+  cursor: pointer;
 }

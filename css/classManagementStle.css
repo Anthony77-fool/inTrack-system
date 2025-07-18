@@ -15,20 +15,6 @@ main{
   width: 40%;
 }
 
-/*class-details, add student form*/
-.photo-container{
-  height: 250px;
-}
-
-/* icon for editing the photo */
-#editing_Photo {
-  position: absolute;
-  top: 54vh;     /* adjust as needed */
-  right: 51%;   /* adjust as needed */
-  color: #555;   /* optional */
-  cursor: pointer;
-}
-
 /*view modal inTrack logo header*/
 #viewModal_Header{
   height: 70px;
