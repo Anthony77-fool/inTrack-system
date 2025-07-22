@@ -85,12 +85,11 @@
   <!-- this is main -->
   <main class="d-flex flex-column gap-4 p-5">
 
-    <!-- Section for creating a class -->
-    <section class="custom-shadow py-4 px-3 container">
-      <h3 class="ms-3 custom-header-fs custom-color fw-semibold">Settings</h3>
+    <section class="custom-shadow pt-4 pb-5 px-3 container">
+      <h2 class="ms-3 custom-header-fs custom-color fw-semibold">Settings</h2>
 
-      <h4 class="fw-semibold ms-3 text-success border-bottom border-success w-25">Profile</h4>
-      
+      <h4 class="fw-semibold ms-3 text-success w-25 ps-2 mt-2">Profile</h4>
+      <hr class="hr-thick-success w-25 ms-3 my-0">
 
       <header class="row align-items-center mt-5">
 
@@ -98,6 +97,7 @@
         <div class="col-4 d-flex justify-content-center">
           <div class="border rounded-circle photo-container" style="height: 200px; width: 200px;">
             <img src="images/profileImg/Sabado-Marck-Anthony.png" alt="uploaded profile image" class="w-100 h-100 rounded-circle object-fit-contain">
+            <i class="fa-solid fa-camera fs-2 custom-color bg-secondary-subtle border p-2 rounded-circle cursor-pointer" id="photo_cameraEdit"></i><!-- Camera Editable -->
           </div>
         </div>
 
@@ -111,7 +111,7 @@
       </header>
 
       <!-- BODY DATA's -->
-      <div class="row gy-3 mt-3 ps-4">
+      <div class="row gy-5 mt-1 ps-4">
 
         <!-- Gender -->
         <div class="d-flex flex-column col-4">
@@ -150,12 +150,29 @@
         </div>
 
         <!-- Password -->
-        <div class="d-flex flex-column col-4">
-          <h3>Password</h3>
-          <div class="d-flex">
-            <h3>*************</h3>
+        <!-- Password -->
+        <div class="col-4">
+          <label for="password" class="form-label fw-bold fs-5">Password</label>
+          <div class="input-group">
+            <input type="password" id="password" class="form-control" value="secret1234" disabled>
             
+            <!-- View/Hide Icon -->
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword" title="Show/Hide Password">
+              <i class="fa-solid fa-eye" id="eyeIcon"></i>
+            </button>
+
+            <!-- Change Password Icon -->
+            <button class="btn btn-outline-success" type="button" id="changePassword" title="Change Password">
+              <i class="fa-solid fa-key"></i>
+            </button>
           </div>
+        </div>
+
+
+        <!-- About -->
+        <div class="d-flex flex-column col-12">
+          <h5 class="fw-bold">About</h5>
+          <h6 class="custom-color w-50 cstm-lttr-spcng">INtrACK is a QR code-based attendance system designed to simplify and speed up the process of tracking student attendance. It allows teachers to scan student QR codes for real-time logging, reducing manual errors and paperwork. The system features user profiles, secure access for advisers, and organized attendance records for easy monitoring and reporting.</h6>
         </div>
 
       </div>
@@ -221,6 +238,22 @@
   <script src="js/sySelect.js"></script><!-- for the class management s.y. selection -->
   <script src="js/calendar.js"></script><!-- for the calendar "ASIDE" -->
   <script src="js/tooltip.js"></script>
+  
+  <!-- for toggeling password -->
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+
+      // Toggle icon
+      togglePassword.innerHTML = type === 'password'
+        ? '<i class="fa-solid fa-eye"></i>'
+        : '<i class="fa-solid fa-eye-slash"></i>';
+    });
+  </script>
 
 </body>
 </html>
