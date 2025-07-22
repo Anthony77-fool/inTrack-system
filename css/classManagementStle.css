@@ -48,3 +48,10 @@ main{
   top: 4vh;
   left: 27.2%;
 }
+
+/*for Settings.html camera*/
+#photo_cameraEdit{
+  position: absolute;
+  top: 45vh;
+  left: 39.5%;
+}
