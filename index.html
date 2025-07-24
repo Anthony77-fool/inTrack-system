@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lottie Overlay Message</title>
+  <!--Bootstrap link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- This block only appears on small screens -->
+  <div class="d-flex justify-content-center align-items-center flex-column d-block d-lg-none warning-container">
+    <!-- Lottie animation -->
+    <canvas id="canvas" class="lottie-overlay"></canvas>
+
+    <!-- Message -->
+    <h5>Sorry! This site works best on laptop and desktop devices</h5>
+  </div>
+
+  <style>
+    .warning-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .lottie-overlay {
+      width: 150px;
+      height: 150px;
+      pointer-events: none;
+    }
+  </style>
+
+  <script type="module">
+    import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+    new DotLottie({
+      autoplay: true,
+      loop: true,
+      canvas: document.getElementById("canvas"),
+      src: "animations/404-error.json", // your downloaded file
+    });
+  </script>
+
+</body>
+</html>
