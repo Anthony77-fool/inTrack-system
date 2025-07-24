@@ -1,0 +1,11 @@
+/*style for error 404 page*/
+.warning-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+}

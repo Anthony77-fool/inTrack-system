@@ -42,11 +42,23 @@
   <link rel="stylesheet" href="css/calendar.css">
   <link rel="stylesheet" href="css/tooltipStyle.css">
 
+  <!-- 404 Error Page -->
+  <link rel="stylesheet" href="css/pageErrorStyle.css">
+
 </head>
 <body>
-  
+
+  <!-- This block only appears on small screens -->
+  <div class="d-flex justify-content-center align-items-center flex-column d-block d-lg-none warning-container">
+    <!-- Lottie animation -->
+    <canvas id="canvas" class="lottie-overlay"></canvas>
+
+    <!-- Message -->
+    <h5>Sorry! This site works best on laptop and desktop devices</h5>
+  </div>
+
   <!-- Navigation: Hamburger Menu -->
-  <nav class="position-fixed h-100 w-25">
+  <nav class="position-fixed h-100 w-25 d-none d-lg-block">
 
     <!-- Aside Bar Header -->
     <header class="custom-shadow">
@@ -56,13 +68,13 @@
     <!-- Aside Bar Body -->
     <div class="body mt-4">
       <ul class="list-unstyled d-flex flex-column gap-4"><!-- Current Focus -->
-        <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer cstm-box-bg-clr">
-          <i class="fa-solid fa-school fs-3 ms-5 me-4 text-white"></i>
-          <a class="text-decoration-none fs-5 text-white fw-bold cstm-lttr-spcng" href="class-management.html">Class Management</a>
-        </li>
         <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer">
-          <i class="fa-solid fa-camera fs-3 ms-5 me-4 cstm-icon-clr"></i>
-          <a class="text-decoration-none fs-5 custom-color fw-bold cstm-lttr-spcng" href="qr-scanner-management.html">QR Scanner Management</a>
+          <i class="fa-solid fa-school fs-3 ms-5 me-4 cstm-icon-clr"></i>
+          <a class="text-decoration-none fs-5 custom-color fw-bold cstm-lttr-spcng" href="class-management.html">Class Management</a>
+        </li>
+        <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer cstm-box-bg-clr">
+          <i class="fa-solid fa-camera fs-3 ms-5 me-4 cstm-icon-clr text-white"></i>
+          <a class="text-decoration-none fs-5 text-white fw-bold cstm-lttr-spcng" href="qr-scanner-management.html">QR Scanner Management</a>
         </li>
         <li class="custom-shadow aside-bar-h d-flex align-items-center cursor-pointer">
           <i class="fa-solid fa-chart-column fs-3 ms-5 me-4 cstm-icon-clr"></i>
@@ -77,13 +89,20 @@
       <div class="usrnme-footer-container d-flex-center">
         <h3 class="fs-5">Marck Anthony Sabado</h3>
       </div>
-      <i class="fa-solid fa-angle-up fs-2 cursor-pointer"></i>
+      <div class="dropup-center">
+        <!-- ICON for logout and settings -->
+        <i class="fa-solid fa-angle-up fs-2 cursor-pointer" type="button" data-bs-toggle="dropdown"></i>
+        <ul class="dropdown-menu rounded-0 custom-shadow border-0 m-0 p-0">
+          <li><a class="dropdown-item cstm-lttr-spcng fs-5 custom-color p-2 text-center fw-bold" href="settings.html">Settings</a></li>
+          <li><a class="dropdown-item cstm-lttr-spcng fs-5 custom-color p-2 text-center fw-bold" href="#">Logout</a></li>
+        </ul>
+      </div>
     </footer>
 
   </nav>
 
   <!-- this is main -->
-  <main class="d-flex flex-column gap-4  p-5">
+  <main class="d-flex flex-column gap-4  p-5 d-none d-lg-block">
 
     <!-- Section for creating a class -->
     <section class="custom-shadow py-4 px-3">
@@ -128,7 +147,7 @@
   </main>
 
   <!-- ASide Bar -->
-  <aside class="position-fixed h-100 d-flex flex-column gap-4" id="mini-sidebar">
+  <aside class="position-fixed h-100 d-flex flex-column gap-4 d-none d-lg-block" id="mini-sidebar">
     
     <!-- CALENDAR -->
     <article>
@@ -184,6 +203,9 @@
   <script src="js/sySelect.js"></script><!-- for the class management s.y. selection -->
   <script src="js/calendar.js"></script><!-- for the calendar "ASIDE" -->
   <script src="js/tooltip.js"></script>
+
+  <!-- error page -->
+  <script src="js/errorPage.js" type="module"></script>
 
 </body>
 </html>
