@@ -39,21 +39,37 @@
   <!-- CUSTOM CSS CLasses -->
   <link rel="stylesheet" href="css/customClasses.css">
   <link rel="stylesheet" href="css/classManagementStle.css">
-  <link rel="stylesheet" href="css/calendar.css">
   <link rel="stylesheet" href="css/tooltipStyle.css">
 
   <!-- 404 Error Page -->
   <link rel="stylesheet" href="css/pageErrorStyle.css">
 
+  <!-- Internal CSS -->
+  <style>
+    #login_Section>header>picture>img{
+      height: 140px;
+    }
+
+    #picture_Section{
+      background-color: rgb(168, 212, 173); 
+      height: 100vh;
+    }
+
+    #picture_Section>picture>img{
+      height: 500px;
+    }
+
+  </style>
+
 </head>
 <body class="d-flex flex-row">
 
   <!-- LOGIN Section -->
-  <section class="w-50 border border-1 d-flex flex-column gap-4">
+  <section class="w-50 border border-1 d-flex flex-column gap-4" id="login_Section">
 
     <header>
       <picture>
-        <img src="images/inTrack-logo.jpg" alt="This is INtrACK Logo" class="w-50" style=" height: 140px;">
+        <img src="images/inTrack-logo.jpg" alt="This is INtrACK Logo" class="w-50">
       </picture>
     </header>
 
@@ -81,7 +97,13 @@
     
     <!-- For Forgot Password -->
     <div class="w-100 d-flex-center">
-      <div class="w-50 d-flex justify-content-end align-items-end">
+      <div class="w-50 d-flex justify-content-between">
+
+        <div class="d-flex form-check">
+          <input type="checkbox" class="form-check-input cursor-pointer" id="show-password">
+          <label for="show-password" class="ms-2 text-dark-emphasis cstm-lttr-spcng cursor-pointer">Show Password</label>
+        </div>
+
         <a href="#" class="fs-6 text-decoration-none text-success fw-bolder cstm-lttr-spcng">Forgot Password</a>
       </div>
     </div>
@@ -99,9 +121,9 @@
   </section>
 
   <!-- PICTURE Section -->
-  <section class="w-50 d-flex-center" style="background-color: rgb(168, 212, 173); height: 100vh;">
+  <section class="w-50 d-flex-center" id="picture_Section">
     <picture>
-      <img src="images/log-in-section-image.png" alt="" class="w-100" style="height: 500px;">
+      <img src="images/log-in-section-image.png" alt="" class="w-100">
     </picture>
   </section>
 
