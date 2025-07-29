@@ -1,0 +1,53 @@
+#email_Section>header>picture>img{
+  height: 140px;
+}
+
+#picture_Section{
+  background-color: rgb(168, 212, 173); 
+  height: 100vh;
+}
+
+#picture_Section>picture>img{
+  height: 550px;
+}
+
+#exit_Modal-icon{
+  position: relative;
+  bottom: 4vh;
+  left: 65%;
+  color: #198754; /* Same as text-success */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+#exit_Modal-icon:hover {
+  color: #dc3545; /* Bootstrap's text-danger color */
+}
+
+.otp-box {
+  width: 45px;
+  height: 55px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.otp-box:focus {
+  border-color: #198754;
+  outline: none;
+}
+
+/* Shake animation */
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
