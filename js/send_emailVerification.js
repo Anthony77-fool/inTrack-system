@@ -103,7 +103,7 @@
       }).get().join('');
 
       if (enteredCode === correctCode) {
-        window.location.href = "next-page.html"; // ✅ Redirect if correct
+        window.location.href = "user-registration.html"; // ✅ Redirect if correct
       } else {
         // ❌ If wrong code, show incorrect modal and close both after delay
         $('#emailVerifyModal').modal('hide'); // Close OTP modal
