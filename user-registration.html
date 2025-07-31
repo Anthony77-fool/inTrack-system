@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registration Page</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/inac-logo.png">
+
+  <!--Bootstrap link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- BS ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!--CDN for QRCode generator-->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+
+  <!--CDN for Webcam HTML5 -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- CUSTOM GOOGLE FONTS: Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Over+the+Rainbow&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Font Link for Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/da97a1e785.js" crossorigin="anonymous"></script>
+
+  <!-- CUSTOM CSS CLasses -->
+  <link rel="stylesheet" href="css/customClasses.css">
+  <link rel="stylesheet" href="css/classManagementStle.css">
+  <link rel="stylesheet" href="css/tooltipStyle.css">
+  <link rel="stylesheet" href="css/verify_Email.css">
+
+  <!-- 404 Error Page -->
+  <link rel="stylesheet" href="css/pageErrorStyle.css">
+
+</head>
+<body class="d-flex flex-row">
+
+  <!-- PICTURE Section -->
+  <section class="w-50 d-flex-center position-fixed" id="picture_Section">
+    <picture>
+      <img src="images/registration-bg-section.png" alt="" class="w-100">
+    </picture>
+  </section>
+
+  <!-- Registration Section -->
+  <section class="w-50 border border-1 d-flex flex-column gap-4" id="email_Section" style="margin-left: 50%;">
+
+    <header>
+      <picture>
+        <img src="images/inTrack-logo.jpg" alt="This is INtrACK Logo" class="w-50">
+      </picture>
+    </header>
+
+    <!-- Top Text -->
+    <div class="d-flex-center flex-column">
+      <h2 class="cstm-lttr-spcng text-info-emphasis">Registration</h2>
+      <h6 class="text-secondary">Please complete to create your account</h6>
+    </div>
+    
+    <!-- For First Name -->
+    <div class="d-flex flex-column align-items-center w-100">
+      <div class="w-50">
+        <label for="email-input" class="form-label">First Name</label>
+        <input type="email" id="email-input" placeholder="Thalia Gielyn" class="form-control">
+      </div>
+    </div>
+
+    <!-- For Middle Name and Last Name -->
+    <div class="d-flex justify-content-center align-items-center w-100">
+
+      <div class="w-50 d-flex flex-row justify-content-center align-items-center gap-3">
+        <div>
+          <label for="email-input" class="form-label">Middle Name</label>
+          <input type="email" id="email-input" placeholder="Licuan" class="form-control">
+        </div>
+        <div>
+          <label for="email-input" class="form-label">Last Name</label>
+          <input type="email" id="email-input" placeholder="Sabado" class="form-control">
+        </div> 
+      </div>
+
+    </div>
+
+    <!-- Phone Number -->
+    <div class="d-flex flex-column align-items-center w-100">
+      <div class="w-50">
+        <label for="email-input" class="form-label">Phone Number</label>
+        <input type="email" id="email-input" placeholder="123456789101" class="form-control">
+      </div>
+    </div>
+
+    <!-- GENDER -->
+    <div class="d-flex flex-column align-items-center w-100">
+      <div class="w-50">
+
+        <!-- Label -->
+        <label class="form-label fw-semibold fs-6 custom-color">Gender*</label>
+
+        <div class="d-flex gap-3">
+          <!-- MALE -->
+          <div class="form-control d-flex align-items-center gap-2 border rounded-2">
+            <input class="form-check-input cursor-pointer" type="radio" name="gender" id="genderMale" value="Male">
+            <label class="form-check-label mb-0 cursor-pointer" for="genderMale">Male</label>
+          </div>
+          <!-- FEMALE -->
+          <div class="form-control d-flex align-items-center gap-2 border rounded-2">
+            <input class="form-check-input cursor-pointer" type="radio" name="gender" id="genderFemale" value="Female">
+            <label class="form-check-label mb-0 cursor-pointer" for="genderFemale">Female</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Address Selects -->
+    <div class="w-100 d-flex-center">
+
+      <div class="d-flex flex-column w-50">
+        <!-- Label -->
+        <label class="form-label fw-semibold fs-6 custom-color">Address*</label>
+        
+        <div class="d-flex flex-column w-100 gap-4">
+          <!-- Province Dropdown -->
+          <select id="province" class="form-select cursor-pointer">
+            <option selected disabled class="cursor-pointer">Select Province</option>
+          </select>
+
+          <!-- Municipality Dropdown -->
+          <select id="municipality" class="form-select cursor-pointer">
+            <option selected disabled class="cursor-pointer">Select Municipality</option>
+          </select>
+
+          <!-- Barangay Dropdown -->
+          <select id="barangay" class="form-select cursor-pointer">
+            <option selected disabled class="cursor-pointer">Select Barangay</option>
+          </select>
+        </div>
+      </div>
+    
+    </div>
+
+    <!-- Birth Date -->
+    <div class="w-100 d-flex-center">
+
+      <div class="w-50 d-flex flex-column">
+        <!-- Label -->
+        <label class="form-label fw-semibold fs-6 custom-color">Birth Date*</label>
+
+        <div class="d-flex flex-column gap-3">
+          <!-- Month, Day Selects Container -->
+          <div class="d-flex flex-row gap-3">
+            <select id="birthMonth" class="form-select cursor-pointer">
+              <option selected disabled class="cursor-pointer">Select Month</option>
+            </select>
+            
+            <select id="birthDay" class="form-select cursor-pointer">
+              <option selected disabled class="cursor-pointer">Select Day</option>
+            </select>
+          </div>
+
+          <!-- Year Select -->
+          <select id="birthYear" class="form-select cursor-pointer">
+            <option selected disabled class="cursor-pointer">Select Year</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-flex-center w-100">
+      <button class="btn btn-success w-50 cstm-lttr-spcng fw-bold fs-5" id="signUp-btn">Sign Up</button>
+    </div>
+
+    <!-- User Notice -->
+    <div class="w-100 d-flex-center text-secondary small pt-3">
+      <p class="w-50 text-center">
+        By clicking <strong class="text-success">Sign Up</strong>, you agree to the creation of your account in our system. 
+        You also accept our terms, including how we manage your personal data and uphold your privacy. 
+        Please ensure that the information you provide is accurate and truthful.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Email Verification Modal -->
+  <div class="modal fade" id="emailVerifyModal" tabindex="-1" aria-labelledby="emailVerifyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title text-info-emphasis fs-2" id="emailVerifyModalLabel">Verification Code</h5>
+          <i class="fa-solid fa-circle-xmark cursor-pointer fs-1" id="exit_Modal-icon" data-bs-dismiss="modal" title="Exit Form"></i><!-- ICON for exiting modal -->
+        </div>
+
+        <div class="modal-body">
+          <p class="mb-2">We’ve sent a verification code to your email address. Please enter the 6-digit code below:</p>
+          
+          <div class="d-flex justify-content-center gap-2 mb-3" id="otpInputs">
+            <input type="text" maxlength="1" class="otp-box text-success" />
+            <input type="text" maxlength="1" class="otp-box text-success" />
+            <input type="text" maxlength="1" class="otp-box text-success" />
+            <input type="text" maxlength="1" class="otp-box text-success" />
+            <input type="text" maxlength="1" class="otp-box text-success" />
+            <input type="text" maxlength="1" class="otp-box text-success" />
+          </div>
+
+          <div class="text-center text-muted mb-2">
+            Code expires in <span id="timer">01:00</span>
+          </div>
+
+          <div class="text-center">
+            <button class="btn btn-link text-decoration-none p-0" id="resendBtn" disabled>Resend Code</button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="verify-btn">Verify</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Incorrect Code Modal (new) -->
+  <div class="modal fade" id="incorrectCodeModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content text-center p-3">
+        <div class="modal-body">
+          <p class="text-danger fs-5 fw-semibold">Incorrect verification code. Please try again.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/address_Selection.js"></script>
+  <script src="js/birthdate_Selection.js"></script>
+  <script src="js/tooltip.js"></script><!-- ToolTip js -->
+
+</body>
+</html>
