@@ -12,7 +12,6 @@
 }
 
 #exit_Modal-icon{
-  position: relative;
   bottom: 4vh;
   left: 65%;
   color: #198754; /* Same as text-success */
@@ -50,4 +49,13 @@
   60% { transform: translateX(-5px); }
   80% { transform: translateX(5px); }
   100% { transform: translateX(0); }
+}
+
+/*For toggleing password*/
+.toggle-password{
+  position: absolute; 
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%); 
+  cursor: pointer;
 }
