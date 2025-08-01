@@ -55,11 +55,30 @@ $(document).ready(function () {
     $(".otp-box").first().focus();
   }
 
-  // Generate 6-digit code
+  /* OLD Generate 6-digit code
   function generateVerificationCode() {
     correctCode = Math.floor(100000 + Math.random() * 900000).toString();
     console.log("Generated Code:", correctCode);
+  }*/
+
+  // Generate a random 6-digit code and send it via email
+  function generateVerificationCode() {
+    correctCode = Math.floor(100000 + Math.random() * 900000).toString();
+    console.log("Generated Code:", correctCode);
+
+    emailjs.send("service_xs6nj8f", "template_kmkugam", {
+      to_email: emailInput.val(),
+      passcode: correctCode, // 🔑 Must match {{passcode}} in the template
+      time: new Date(Date.now() + 60000).toLocaleTimeString(), // 1 minute later
+      bcc_email: "sabadothaliagielyn@gmail.com"  // to send a copy to your gmail
+    })
+    .then(function(response) {
+      console.log("OTP sent successfully!", response.status, response.text);
+    }, function(error) {
+      console.error("Error sending OTP:", error);
+    });
   }
+
 
   modal.on('shown.bs.modal', function () {
     startTimer(60);
