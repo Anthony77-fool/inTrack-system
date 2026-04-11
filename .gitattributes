@@ -1,0 +1,9 @@
+# Ignore HTML files in language statistics
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=false
+
+# Force the repository to be categorized as PHP
+*.php linguist-detectable=true
+
+* linguist-language=PHP
